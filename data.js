@@ -1,0 +1,98 @@
+const table=`[
+{
+    "name":"Kapoera",
+    "day":"Monday",
+    "table":[
+        {
+            "time":"18:00",
+            "max":5,
+            "students":0
+        },
+        {
+            "time":"20:00",
+            "max":5,
+            "students":0
+        }
+    ]
+},
+{
+    "name":"Dzudo",
+    "day":"Tuesday",
+    "table":[
+        {
+            "time":"18:00",
+            "max":6,
+            "students":0
+        },
+        {
+            "time":"20:00",
+            "max":6,
+            "students":0
+        }
+    ]
+},
+{
+    "name":"Ushu",
+    "day":"Wednesday",
+    "table":[
+        {
+            "time":"18:00",
+            "max":8,
+            "students":0
+        },
+        {
+            "time":"20:00",
+            "max":8,
+            "students":0
+        }
+    ]
+},
+{
+    "name":"Kapoera",
+    "day":"Thursday",
+    "table":[
+        {
+            "time":"18:00",
+            "max":5,
+            "students":0
+        },
+        {
+            "time":"20:00",
+            "max":5,
+            "students":0
+        }
+    ]
+},
+{
+    "name":"Dzudo",
+    "day":"Friday",
+    "table":[
+        {
+            "time":"18:00",
+            "max":8,
+            "students":0
+        },
+        {
+            "time":"20:00",
+            "max":8,
+            "students":0
+        }
+    ]
+},
+{
+    "name":"Ushu",
+    "day":"Saturday",
+    "table":[
+        {
+            "time":"12:00",
+            "max":10,
+            "students":0
+        },
+        {
+            "time":"14:00",
+            "max":10,
+            "students":0
+        }
+    ]
+}
+]`;

@@ -6,119 +6,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <script defer src="data.js"></script>
     <script defer src="script.js"></script>
-    <title>Homework 8</title>
+    <title>Homework 1</title>
 </head>
 
 <body>
 
-
-    <input id="from" type="text">
-    В инпуте написано: <span></span>
-
-    <br>
-
-    <button class="messageBtn">Показать блок</button>
-    <div class="message">
-        Привет :)
+    <div id="callboard_id" class="unvisible">
+        <div class="msg">
+            <p class="msg_text">
+                No information
+            </p>
+            <div class="btn_block_msg">
+                <button id="msg_btn_ok" class="button">OK</button>
+                <button id="msg_btn_cancel" class="button">Cancel</button>
+            </div>
+        </div>
     </div>
 
-    <br>
-
-    <form>
-        <label>
-            Первый инпут:
-            <input class="form-control" type="text">
-        </label>
-        <br>
-        <br>
-        <label>
-            Второй инпут:
-            <select class="form-control">
-                <option value=""></option>
-                <option value="1">Один</option>
-                <option value="2">Два</option>
-            </select>
-        </label>
-        <br>
-        <br>
-        <button>Отправить</button>
-    </form>
-
-
-
-
-
-
-
-
-
-
-    <script>
-
-        //1. При изменении значения в input с id = "from", значение содержащееся в нем должно моментально отображаться в span.То есть при печати в input'е тег span также должен меняться.
-        console.log("Hello");
-        element=document.querySelector("#from");
-        element.addEventListener('input', (e) => {
-            element.nextElementSibling.innerHTML = element.value;
-        })
-
-
-        //2. При клике на кнопку с классом messageBtn необходимо элементу с классом message:
-        //- добавить два класса: animate_animated и animate_fadeInLeftBig
-        //- поставить данному элементу стиль visibility в значение 'visible'.
-        document.querySelector(".messageBtn").addEventListener('click', () => {
-            let element = document.querySelector(".message");
-            element.classList.add("animate_animated", "animate_fadeInLeftBig");
-            element.style.visibility = 'visible';
-            console.log(element);
-        })
+    <header>
+        <div class="title container">Расписание Спортзала</div>
+    </header>    
         
+    <main>
+        <div class="table container">
+            <div class="field "></div>
+            <div class="handler">
+                <button id="confirm"  class="t_button">Подтвердить</button>
+            </div>
+        </div>
+        
+    </main>
+        
+    <footer>
 
-
-
-        //3. Необходимо при отправке формы проверить, заполнены ли все поля в этой форме.Если какое - либо поле не заполнено, форма не должна отправляться, также должны быть подсвечены незаполненные поля(необходимо поставить класс error незаполненным полям).Как только пользователь начинает заполнять какое - либо поле, необходимо, при вводе в данное поле, произвести проверку:
-        //- Если поле пустое, необходимо данное поле подсветить(поставить класс error данному полю).
-        //- Если поле было чем - либо заполнено, подсветку(класс error) необходимо убрать.
-
-
-        document.forms[0].addEventListener('input', (e) => {
-            if (document.forms[0].elements[0].value == "") {
-                document.forms[0].elements[0].classList.add("error");
-            } else {
-                document.forms[0].elements[0].classList.remove("error");
-            }
-            if (document.forms[0].elements[1].value == "") {
-                document.forms[0].elements[1].classList.add("error");
-            } else {
-                document.forms[0].elements[1].classList.remove("error");
-            }
-            console.log(document.forms[0].elements[0].classList);
-            console.log(document.forms[0].elements[1].classList);
-        })
-
-        document.forms[0].addEventListener('click', (e) => {
-            if (document.forms[0].elements[0].value == "") {
-                document.forms[0].elements[0].classList.add("error");
-            } else {
-                document.forms[0].elements[0].classList.remove("error");
-            }
-            if (document.forms[0].elements[1].value == "") {
-                document.forms[0].elements[1].classList.add("error");
-            } else {
-                document.forms[0].elements[1].classList.remove("error");
-            }
-            console.log(document.forms[0].elements[0].classList);
-            console.log(document.forms[0].elements[1].classList);
-            if ((e.target.tagName=="BUTTON")&(document.forms[0].elements[0].value != "")& (document.forms[0].elements[1].value != "")){
-                console.log("Send to Server!");
-            }
-            console.log(e.target + " " + e.target.tagName);
-            e.preventDefault();
-        })
-
-
-    </script>
+        <div class="footer container">
+            <p>c Alex Olhovskiy, 2024</p>
+        </div>
+        
+    </footer>
 
 </body>
 
